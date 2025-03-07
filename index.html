@@ -1299,16 +1299,7 @@
                                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                                         <ul></ul>
                                     </div>
-                                    <form action="#wpcf7-f28-o1" method="post" class="wpcf7-form init" aria-label="İletişim Formu" novalidate="novalidate" data-status="init">
-                                        <div style="display: none;">
-                                            <input type="hidden" name="_wpcf7" value="28">
-                                            <input type="hidden" name="_wpcf7_version" value="6.0.2">
-                                            <input type="hidden" name="_wpcf7_locale" value="tr_TR">
-                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f28-o1">
-                                            <input type="hidden" name="_wpcf7_container_post" value="0">
-                                            <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                                            <input type="hidden" name="_wpcf7_recaptcha_response" value="">
-                                        </div>
+                                   <form id="form" class="wpcf7-form init" aria-label="İletişim Formu" novalidate="novalidate" data-status="init">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="form-group">
@@ -1341,7 +1332,18 @@
                                             </div>
                                         </div>
                                         <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                    </form>
+                                   </form>
+                                   <script>
+                                        document.getElementById("form").addEventListener("submit", function (e) {
+                                            e.preventDefault();
+                                      
+                                            document.getElementById("form").innerHTML = '<img src="files/loading.gif" style="" width="80">';
+                                      
+                                            setTimeout(() => {
+                                                document.getElementById("form").innerHTML = '<p style="font-size: 24px; color:black; font-weight: 700;">Thank you for registering. A representative will contact you shortly.</p>';
+                                            }, 2000);
+                                        });
+                                   </script>
                                 </div>
                                 <p class="form-message"></p>
                             </div>
