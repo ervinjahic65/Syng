@@ -68,3 +68,8 @@ img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 15
                 .hvr-ef:hover{
                 transform:scale(.9);
                 }
+
+                .footer-title a:hover {
+                    color: #b12028 !important;
+                    text-align: underline !important;
+                }
