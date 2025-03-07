@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - High Storm Consulting</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <!-- Logo -->
+          <div>
+              <img src="files/logo.png" alt="Logo" class="h-14">
+          </div>
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-6">
+              <a href="index.html" class="text-gray-700 hover:text-blue-500">Beranda</a>
+              <a href="about.html" class="text-gray-700 hover:text-blue-500">Tentang Kami</a>
+              <a href="contact.html" class="text-gray-700 hover:text-blue-500">Hubungi Kami</a>
+              <a href="terms.html" class="text-gray-700 hover:text-blue-500">Syarat dan Ketentuan</a>
+              <a href="privacy.html" class="text-gray-700 hover:text-blue-500">Kebijakan Privasi</a>
+          </nav>
+          
+          <!-- Mobile Hamburger Button -->
+          <div class="md:hidden">
+              <button id="hamburger-btn" class="text-gray-700 hover:text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+              </button>
+          </div>
+      </div>
+
+      <!-- Mobile Navigation (Hidden by default) -->
+      <div id="mobile-nav" class="md:hidden hidden">
+          <nav class="flex flex-col items-center space-y-4 py-4 bg-white shadow-md">
+              <a href="index.html" class="text-gray-700 hover:text-blue-500">Beranda</a>
+              <a href="about.html" class="text-gray-700 hover:text-blue-500">Tentang Kami</a>
+              <a href="contact.html" class="text-gray-700 hover:text-blue-500">Hubungi Kami</a>
+              <a href="terms.html" class="text-gray-700 hover:text-blue-500">Syarat dan Ketentuan</a>
+              <a href="privacy.html" class="text-gray-700 hover:text-blue-500">Kebijakan Privasi</a>
+          </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section class="mb-16">
+            <h1 class="text-4xl font-bold text-center mb-6">Hubungi Kami</h1>
+            <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto">
+                Kami ingin mendengar kabar dari Anda! Apakah Anda memiliki pertanyaan, masukan, atau membutuhkan bantuan, tim kami siap membantu. Isi formulir di bawah ini, dan kami akan segera menghubungi Anda.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+                <form id="form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subjek</label>
+                        <input type="text" id="subject" name="subject" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Pesan</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            Kirim Pesan
+                        </button>
+                    </div>
+                </form>
+                <script>
+                  document.getElementById("form").addEventListener("submit", function (e) {
+                      e.preventDefault();
+              
+                      // Menampilkan GIF loading secara terpusat secara horizontal dan vertikal. Pastikan formulir diatur dengan display flex.
+                      document.getElementById("form").innerHTML = '<img src="files/loading.gif" style="display: block; margin: 0 auto;" width="80">';
+                      document.getElementById("form").style.display = "flex";
+                      document.getElementById("form").style.justifyContent = "center"; // Penyelarasan horizontal
+                      document.getElementById("form").style.alignItems = "center";     // Penyelarasan vertikal
+                      document.getElementById("form").style.minHeight = "100px"; // Pastikan ada tinggi minimal untuk penyelarasan. Sesuaikan jika perlu.
+              
+                      setTimeout(() => {
+                          document.getElementById("form").innerHTML = '<p style="font-size: 24px; color:black; font-weight: 700; text-align: center;">Terima kasih telah menghubungi kami.</p>';
+                          document.getElementById("form").style.display = "block"; // Ubah kembali ke block untuk menampilkan pesan terima kasih.
+                          // Menghapus style jika ingin kembali ke style awal
+                          document.getElementById("form").style.justifyContent = "";
+                          document.getElementById("form").style.alignItems = "";
+                          document.getElementById("form").style.minHeight = "";
+                      }, 2000);
+                  });
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="max-w-7xl mx-auto text-center">
+          <p>
+              Nomor Perusahaan: 00943935 <br>
+              Alamat: Lime St, London EC3M 7HR, UK <br>
+              Nomor Telepon: 01632 960189 <br> <br>
+          </p>
+          <p>&copy; 2025 Company. Semua hak cipta dilindungi.</p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('hamburger-btn').addEventListener('click', function() {
+          const mobileNav = document.getElementById('mobile-nav');
+          mobileNav.classList.toggle('hidden');
+      });
+      
+      document.querySelectorAll(".accordion-button").forEach(button => {
+          button.addEventListener("click", () => {
+              const content = button.nextElementSibling;
+              button.setAttribute("aria-expanded", content.classList.toggle("hidden"));
+          });
+      });
+    </script>
+</body>
+</html>
