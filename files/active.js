@@ -106,16 +106,7 @@
         }, duration);
     });
 
-    // :: 4.0 SCROLL LINK ACTIVE CODE
-    var scrollLink = $('.scroll');
-
-    // :: 5.0 SMOOTH SCROLLING ACTIVE CODE
-    scrollLink.on('click', function (e) {
-        e.preventDefault();
-        $('body,html').animate({
-            scrollTop: $(this.hash).offset().top
-        }, 1000);
-    });
+    
 
     // :: 6.0 AOS ACTIVE CODE
     //AOS.init();
