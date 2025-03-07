@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | High Storm Consulting</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+</head>
+<body class="bg-gray-100 font-sans">
+
+<!-- Header with Navigation -->
+<header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div>
+            <img src="files/logo.png" alt="Logo" class="h-14">
+        </div>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6">
+            <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+            <a href="about.html" class="text-gray-700 hover:text-blue-500">About Us</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-500">Contact Us</a>
+            <a href="terms.html" class="text-gray-700 hover:text-blue-500">Terms and Conditions</a>
+            <a href="privacy.html" class="text-gray-700 hover:text-blue-500">Privacy Policy</a>
+        </nav>
+        
+        <!-- Mobile Hamburger Button -->
+        <div class="md:hidden">
+            <button id="hamburger-btn" class="text-gray-700 hover:text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div id="mobile-nav" class="md:hidden hidden">
+        <nav class="flex flex-col items-center space-y-4 py-4 bg-white shadow-md">
+            <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+            <a href="about.html" class="text-gray-700 hover:text-blue-500">About Us</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-500">Contact Us</a>
+            <a href="terms.html" class="text-gray-700 hover:text-blue-500">Terms and Conditions</a>
+            <a href="privacy.html" class="text-gray-700 hover:text-blue-500">Privacy Policy</a>
+        </nav>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto py-12 px-6">
+
+    <!-- Hero Section -->
+    <div class="container">
+        <h1 class="mb-4 text-center">About High Storm Consulting</h1>
+        <p>
+          Start doing business in Malaysia with High Storm Consulting! We are your one-stop solution for navigating the complexities of establishing and running a successful business in Malaysia's dynamic market. We understand that expanding into a new country can be daunting, filled with unfamiliar regulations and procedures. That's why we've simplified the entire process, making company registration, bank account opening, and other essential business services incredibly easy and accessible.
+        </p>
+        <br>
+        <p>
+          We provide comprehensive guidance throughout every stage of your journey, from the initial idea to full operational status. Our expert team will assist you with Malaysia company registration, ensuring compliance with all local laws and regulations. We'll help you obtain your tax identification number (TIN/PAN) efficiently and guide you through the process of choosing the right business structure, whether it's an LLC, a joint stock company, or another suitable option. We are dedicated to tailoring our services to meet the unique demands of your business.
+        </p>
+        <br>
+        <p>
+          High Storm Consulting is acutely aware of the evolving needs of the global workforce. We recognize that technology, shifting demographics, urban development, and the increasing preference for collaborative, agile, and flexible working styles are reshaping the business landscape. Our services are designed to be responsive to these changes, providing modern solutions for a modernizing Malaysia. We serve to the global workforce.
+        </p>
+        <br>
+        <p>
+          Our commitment extends beyond just the initial setup. High Storm Consulting offers specialized consultations, providing ongoing support and advice as your business grows and adapts. We pride ourselves on building long-term partnerships with our clients. With High Storm Consulting, you can register a company in Malaysia, complete the entire establishment process, open a business bank account, and begin operating with complete ease, comfort, and peace of mind. Let us handle the administrative burdens, so you can focus on what truly matters: building your successful venture in Malaysia. Consider us your trusted partner for growth in the Malaysian market.
+        </p>
+        <br>
+        <p>
+            At High Storm Consulting, we're passionate about empowering entrepreneurs and businesses to thrive in the vibrant Malaysian market. We believe that setting up a business in Malaysia should be a streamlined and accessible process, not a bureaucratic maze.  Our mission is to remove the obstacles and complexities, providing you with the tools and support you need to succeed. We offer a comprehensive suite of services designed to make your entry into the Malaysian market as smooth and efficient as possible.
+        </p>
+        <br>
+        <p>
+            Our team is comprised of experienced professionals with in-depth knowledge of Malaysian business regulations, corporate law, and financial procedures. We stay up-to-date on the latest changes and developments to ensure that you receive accurate, reliable, and timely advice.  Beyond our technical expertise, we're committed to providing exceptional customer service. We understand that every business is unique, and we take the time to understand your specific needs and goals, tailoring our services accordingly. We are more than just service providers; we are your partners in navigating the Malaysian business landscape.
+        </p>
+        <br>
+        <p>
+            From initial consultations and company formation to ongoing compliance and support, High Storm Consulting is your trusted partner every step of the way. We handle everything from company registration and tax ID acquisition to opening bank accounts and advising on the best legal structure for your business (LLC, Joint Stock Company, etc.). We pride ourselves on transparency, efficiency, and a client-centric approach.  Let us handle the complexities, so you can focus on your vision and achieve your business objectives in Malaysia. With High Storm Consulting, you gain a dedicated ally committed to your long-term success.
+        </p>
+      </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-6">
+    <div class="max-w-7xl mx-auto text-center">
+        <p>
+            Company number 00943935 <br>
+            Address: Lime St, London EC3M 7HR, UK <br>
+            Phone number: 01632 960189  <br> <br>
+        </p>
+        <p>&copy; 2025 Company. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('hamburger-btn').addEventListener('click', function() {
+        const mobileNav = document.getElementById('mobile-nav');
+        mobileNav.classList.toggle('hidden');
+    });
+    
+    document.querySelectorAll(".accordion-button").forEach(button => {
+        button.addEventListener("click", () => {
+            const content = button.nextElementSibling;
+            button.setAttribute("aria-expanded", content.classList.toggle("hidden"));
+        });
+    });
+</script>
+
+</body>
+</html>
