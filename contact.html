@@ -1,30 +1,26 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - High Storm Consulting</title>
+    <title>Contáctenos - High Storm Consulting</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-white shadow-md">
       <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <!-- Logo -->
           <div>
               <img src="files/logo.png" alt="Logo" class="h-14">
           </div>
-          <!-- Desktop Navigation -->
           <nav class="hidden md:flex space-x-6">
-              <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
-              <a href="about.html" class="text-gray-700 hover:text-blue-500">About Us</a>
-              <a href="contact.html" class="text-gray-700 hover:text-blue-500">Contact Us</a>
-              <a href="terms.html" class="text-gray-700 hover:text-blue-500">Terms and Conditions</a>
-              <a href="privacy.html" class="text-gray-700 hover:text-blue-500">Privacy Policy</a>
+              <a href="index.html" class="text-gray-700 hover:text-blue-500">Inicio</a>
+              <a href="about.html" class="text-gray-700 hover:text-blue-500">Sobre Nosotros</a>
+              <a href="contact.html" class="text-gray-700 hover:text-blue-500">Contáctenos</a>
+              <a href="terms.html" class="text-gray-700 hover:text-blue-500">Términos y Condiciones</a>
+              <a href="privacy.html" class="text-gray-700 hover:text-blue-500">Política de Privacidad</a>
           </nav>
-          
-          <!-- Mobile Hamburger Button -->
+
           <div class="md:hidden">
               <button id="hamburger-btn" class="text-gray-700 hover:text-blue-500">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,23 +30,22 @@
           </div>
       </div>
 
-      <!-- Mobile Navigation (Hidden by default) -->
       <div id="mobile-nav" class="md:hidden hidden">
           <nav class="flex flex-col items-center space-y-4 py-4 bg-white shadow-md">
-              <a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a>
-              <a href="about.html" class="text-gray-700 hover:text-blue-500">About Us</a>
-              <a href="contact.html" class="text-gray-700 hover:text-blue-500">Contact Us</a>
-              <a href="terms.html" class="text-gray-700 hover:text-blue-500">Terms and Conditions</a>
-              <a href="privacy.html" class="text-gray-700 hover:text-blue-500">Privacy Policy</a>
+              <a href="index.html" class="text-gray-700 hover:text-blue-500">Inicio</a>
+              <a href="about.html" class="text-gray-700 hover:text-blue-500">Sobre Nosotros</a>
+              <a href="contact.html" class="text-gray-700 hover:text-blue-500">Contáctenos</a>
+              <a href="terms.html" class="text-gray-700 hover:text-blue-500">Términos y Condiciones</a>
+              <a href="privacy.html" class="text-gray-700 hover:text-blue-500">Política de Privacidad</a>
           </nav>
       </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
         <section class="mb-16">
-            <h1 class="text-4xl font-bold text-center mb-6">Contact Us</h1>
+            <h1 class="text-4xl font-bold text-center mb-6">Contáctenos</h1>
             <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto">
-                We'd love to hear from you! Whether you have a question, feedback, or need assistance, our team is here to help. Fill out the form below, and we'll get back to you as soon as possible.
+                ¡Nos encantaría saber de usted! Ya sea que tenga una pregunta, comentario o necesite ayuda, nuestro equipo está aquí para ayudarle. Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible.
             </p>
         </section>
 
@@ -58,42 +53,40 @@
             <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
                 <form id="form" class="space-y-6">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
                         <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
                         <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div>
-                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Asunto</label>
                         <input type="text" id="subject" name="subject" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
                         <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
                     </div>
                     <div>
                         <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                            Send Message
+                            Enviar Mensaje
                         </button>
                     </div>
                 </form>
                 <script>
                   document.getElementById("form").addEventListener("submit", function (e) {
                       e.preventDefault();
-              
-                      // Center the GIF horizontally and vertically.  Crucially, set the form's display to flex.
+
                       document.getElementById("form").innerHTML = '<img src="files/loading.gif" style="display: block; margin: 0 auto;" width="80">';
                       document.getElementById("form").style.display = "flex";
-                      document.getElementById("form").style.justifyContent = "center"; // Horizontal centering
-                      document.getElementById("form").style.alignItems = "center";     // Vertical centering
-                      document.getElementById("form").style.minHeight = "100px"; // Ensure there is some height to center within.  Adjust as needed.
-              
+                      document.getElementById("form").style.justifyContent = "center";
+                      document.getElementById("form").style.alignItems = "center";
+                      document.getElementById("form").style.minHeight = "100px";
+
                       setTimeout(() => {
-                          document.getElementById("form").innerHTML = '<p style="font-size: 24px; color:black; font-weight: 700; text-align: center;">Thank you for getting in touch with us.</p>';
-                          document.getElementById("form").style.display = "block"; // Change back to block for the thank you message.
-                          //Remove styles if you want to return to initial style
+                          document.getElementById("form").innerHTML = '<p style="font-size: 24px; color:black; font-weight: 700; text-align: center;">Gracias por ponerse en contacto con nosotros.</p>';
+                          document.getElementById("form").style.display = "block";
                           document.getElementById("form").style.justifyContent = "";
                           document.getElementById("form").style.alignItems = "";
                           document.getElementById("form").style.minHeight = "";
@@ -107,11 +100,12 @@
     <footer class="bg-gray-800 text-white py-6">
       <div class="max-w-7xl mx-auto text-center">
           <p>
-              CIN - U01631KA2010PTC096843 <br>
-              Address - 2, Western Urban Rd, Davri Nagar, Siddharth Nagar, Santacruz East, Mumbai, Maharashtra 400055, India <br>
-              Phone - 0674 2702416 <br> <br>
+              CNPJ: 78.989.613/0001-90 <br>
+              Inscrição Estadual: 8324829-77 <br>
+              Dirección: 974 Rua Itaguaí, Mangabeira, Feira de Santana, 44056-516 <br>
+              Número de teléfono: (75) 2871-8215 <br> <br>
           </p>
-          <p>&copy; 2025 Company. All rights reserved.</p>
+          <p>&copy; 2025 Empresa. Todos los derechos reservados.</p>
       </div>
     </footer>
     <script>
@@ -119,7 +113,7 @@
           const mobileNav = document.getElementById('mobile-nav');
           mobileNav.classList.toggle('hidden');
       });
-      
+
       document.querySelectorAll(".accordion-button").forEach(button => {
           button.addEventListener("click", () => {
               const content = button.nextElementSibling;
