@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기 - High Storm Consulting</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <!-- 로고 -->
+          <div>
+              <img src="files/logo.png" alt="로고" class="h-14">
+          </div>
+          <!-- 데스크탑 네비게이션 -->
+          <nav class="hidden md:flex space-x-6">
+              <a href="index.html" class="text-gray-700 hover:text-blue-500">홈</a>
+              <a href="about.html" class="text-gray-700 hover:text-blue-500">회사 소개</a>
+              <a href="contact.html" class="text-gray-700 hover:text-blue-500">문의하기</a>
+              <a href="terms.html" class="text-gray-700 hover:text-blue-500">이용 약관</a>
+              <a href="privacy.html" class="text-gray-700 hover:text-blue-500">개인정보 보호정책</a>
+          </nav>
+          
+          <!-- 모바일 햄버거 버튼 -->
+          <div class="md:hidden">
+              <button id="hamburger-btn" class="text-gray-700 hover:text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+              </button>
+          </div>
+      </div>
+
+      <!-- 모바일 네비게이션 (기본적으로 숨김) -->
+      <div id="mobile-nav" class="md:hidden hidden">
+          <nav class="flex flex-col items-center space-y-4 py-4 bg-white shadow-md">
+              <a href="index.html" class="text-gray-700 hover:text-blue-500">홈</a>
+              <a href="about.html" class="text-gray-700 hover:text-blue-500">회사 소개</a>
+              <a href="contact.html" class="text-gray-700 hover:text-blue-500">문의하기</a>
+              <a href="terms.html" class="text-gray-700 hover:text-blue-500">이용 약관</a>
+              <a href="privacy.html" class="text-gray-700 hover:text-blue-500">개인정보 보호정책</a>
+          </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section class="mb-16">
+            <h1 class="text-4xl font-bold text-center mb-6">문의하기</h1>
+            <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto">
+                고객님의 소중한 의견을 기다립니다! 문의, 피드백 또는 지원이 필요하시면 언제든지 연락해 주세요. 아래 양식을 작성해 주시면 가능한 한 신속하게 답변 드리겠습니다.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+                <form id="form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">이름</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">이메일</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700">제목</label>
+                        <input type="text" id="subject" name="subject" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">메시지</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            메시지 전송
+                        </button>
+                    </div>
+                </form>
+                <script>
+                  document.getElementById("form").addEventListener("submit", function (e) {
+                      e.preventDefault();
+              
+                      // GIF를 수평 및 수직 중앙에 배치합니다. 양식의 display를 flex로 설정합니다.
+                      document.getElementById("form").innerHTML = '<img src="files/loading.gif" style="display: block; margin: 0 auto;" width="80">';
+                      document.getElementById("form").style.display = "flex";
+                      document.getElementById("form").style.justifyContent = "center"; // 수평 중앙 정렬
+                      document.getElementById("form").style.alignItems = "center";     // 수직 중앙 정렬
+                      document.getElementById("form").style.minHeight = "100px"; // 중앙 정렬을 위한 최소 높이 설정
+              
+                      setTimeout(() => {
+                          document.getElementById("form").innerHTML = '<p style="font-size: 24px; color:black; font-weight: 700; text-align: center;">문의해 주셔서 감사합니다.</p>';
+                          document.getElementById("form").style.display = "block"; // 감사 메시지를 위해 display를 block으로 변경
+                          // 초기 스타일로 복귀하려면 스타일을 제거합니다.
+                          document.getElementById("form").style.justifyContent = "";
+                          document.getElementById("form").style.alignItems = "";
+                          document.getElementById("form").style.minHeight = "";
+                      }, 2000);
+                  });
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="max-w-7xl mx-auto text-center">
+          <p>
+              주소: 서울특별시 중구 서소문동 21-1 <br>
+              전화: +34 986 227 374 <br>
+              법인 등록 번호: 4010501096087 <br> <br>
+          </p>
+          <p>&copy; 2025 Company. 모든 권리 보유.</p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('hamburger-btn').addEventListener('click', function() {
+          const mobileNav = document.getElementById('mobile-nav');
+          mobileNav.classList.toggle('hidden');
+      });
+      
+      document.querySelectorAll(".accordion-button").forEach(button => {
+          button.addEventListener("click", () => {
+              const content = button.nextElementSibling;
+              button.setAttribute("aria-expanded", content.classList.toggle("hidden"));
+          });
+      });
+    </script>
+</body>
+</html>
